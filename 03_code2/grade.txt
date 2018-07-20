@@ -1,0 +1,20 @@
+Grading at Fri Jul 20 13:16:21 UTC 2018
+Checking code2.c for legal syntax
+temp.c: In function ‘printTriangle’:
+temp.c:8:5: error: expected ‘,’ or ‘;’ before ‘for’
+     for(int i = 0;i<=size;i++){
+     ^
+temp.c:8:19: error: ‘i’ undeclared (first use in this function)
+     for(int i = 0;i<=size;i++){
+                   ^
+temp.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+temp.c:8:30: error: expected ‘;’ before ‘)’ token
+     for(int i = 0;i<=size;i++){
+                              ^
+temp.c:8:30: error: expected statement before ‘)’ token
+temp.c:10:22: error: expected ‘;’ before ‘:’ token
+       for(int j=0;j<i:j++)
+                      ^
+The code did not have legal syntax!
+
+Overall Grade: F
