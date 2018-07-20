@@ -1,20 +1,17 @@
-Grading at Fri Jul 20 13:16:21 UTC 2018
+Grading at Fri Jul 20 13:18:51 UTC 2018
 Checking code2.c for legal syntax
-temp.c: In function ‘printTriangle’:
-temp.c:8:5: error: expected ‘,’ or ‘;’ before ‘for’
-     for(int i = 0;i<=size;i++){
-     ^
-temp.c:8:19: error: ‘i’ undeclared (first use in this function)
-     for(int i = 0;i<=size;i++){
-                   ^
-temp.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
-temp.c:8:30: error: expected ‘;’ before ‘)’ token
-     for(int i = 0;i<=size;i++){
-                              ^
-temp.c:8:30: error: expected statement before ‘)’ token
-temp.c:10:22: error: expected ‘;’ before ‘:’ token
-       for(int j=0;j<i:j++)
-                      ^
-The code did not have legal syntax!
+Checking for int printTriangle (int size)
+Found on line 4, column 1 
+Checking for int main(void)
+Found on line 28, column 1 
+Trying to run the code..
+Line_2_did_not_match
+Line_4_did_not_match
+Your file did not match the expected ouput
+Here is what you printed
+Here is a triangle with height 4
+/n*/n**/n***/n****/nThat triangle had 10 total stars
+Here is a triangle with height 7
+/n*/n**/n***/n****/n*****/n******/n*******/nThat triangle had 28 total stars
 
 Overall Grade: F
