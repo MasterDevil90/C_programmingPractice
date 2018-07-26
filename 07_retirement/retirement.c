@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <math.h>
 
-typedef struct _retire_info {
+struct _retire_info {
   int months;
   double contribution;
   double rate_of_return;
-}retire_info;
+}typedef retire_info;
 
 
 void retirement (int startAge,double initial, retire_info working, retire_info retired)
