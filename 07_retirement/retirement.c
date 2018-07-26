@@ -15,17 +15,17 @@ void retirement (int startAge,double initial, retire_info working, retire_info r
   int wAge = startAge +working.months;
   int rAge = wAge + retired.months;
   int cAge = startAge;
-  float balance = initial;
-  for (; cAge <= wAge ; cAge++){
+  double balance = initial;
+  for (; cAge < wAge ; cAge++){
     
-    printf("Age %3d month %2d you have $%.2lf\n",cAge/12 , cAge%12, balance);
+    printf("Age %3d month %2d you have $%.2f\n",cAge/12 , cAge%12, balance);
    
     balance*= 1+working.rate_of_return;
     balance += working.contribution;
     
   }
   for (; cAge < rAge ; cAge++){
-    printf("Age %3d month %2d you have $%.2lf\n",cAge/12, cAge%12 , balance);
+    printf("Age %3d month %2d you have $%.2f\n",cAge/12, cAge%12 , balance);
     balance+= balance*retired.rate_of_return + retired.contribution;
   }
 }
@@ -38,22 +38,22 @@ int main (){
   
   work.months = 489;
   
-  work.contribution=1000;
+  work.contribution=1000.0;
   
-  work.rate_of_return = 0.00375;
+  work.rate_of_return = 0.045/12.0f;
 
   
   retire.months = 384;
   
-  retire.contribution = -4000;
+  retire.contribution = -4000.0f;
   
-  retire.rate_of_return = 0.01/12;
+  retire.rate_of_return = 0.01/12.0f;
   
 
   
   int age = 327;
   
-  float savings =21345.0;
+  double savings =21345.0;
   
 
   
