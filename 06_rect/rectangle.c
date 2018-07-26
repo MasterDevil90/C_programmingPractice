@@ -52,11 +52,14 @@ rectangle intersection(rectangle r1, rectangle r2) {
   }
   else
     {
+      int right = min (r1.width +r1.x ,r2.width + r2.x);
+      int top = min (r1.height + r1.y, r2.height +r2.y);
       r1.x = max(r1.x,r2.x);
       r1.y = max (r1.y, r2.y);
-
-      r1.height= min(r1.height,r2.height);
-      r1.width = min(r1.width,r2.width);
+      //printf("\n%d %d\n",r1.height,r2.height);
+      //printf("\n%d %d\n",r1.width, r2.width);
+      r1.height=  top - r1.y;
+      r1.width = right - r1.x;
       
     }  
   return r1;
@@ -64,7 +67,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
 }
 //You should not need to modify any code below this line
 void printRectangle(rectangle r) {
-  r = canonicalize(r);
+   r = canonicalize(r);
   if (r.width == 0 && r.height == 0) {
     printf("<empty>\n");
   }
